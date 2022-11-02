@@ -1,0 +1,26 @@
+public class SpeedConverter {
+    public static void main(String[] args)
+    {
+
+        isLeapYear(2000);
+        isLeapYear(2001);
+        isLeapYear(-2002);
+
+
+
+    }
+
+    public static boolean isLeapYear(int year){
+        if ((((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) && (year>0 && year <=9999)) {
+            System.out.println(true);
+            return true;
+        }
+
+
+            System.out.println(false);
+            return false;
+        }
+
+
+
+    }
