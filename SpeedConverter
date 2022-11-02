@@ -1,0 +1,38 @@
+public class SpeedConverter {
+    public static void main(String[] args)
+    {
+        toMilesPerHour(1.5);
+        printConversion(5);
+    }
+
+    public static long toMilesPerHour(double kilometersPerHour){
+
+        if (kilometersPerHour<0) {
+            return -1;
+        }
+            else {
+                long calc = Math.round(kilometersPerHour / 1.609);
+                System.out.println(calc);
+                return calc;
+            }
+
+        }
+
+
+
+    public static void printConversion(double kilometersPerHour){
+        if (kilometersPerHour<0) {
+            System.out.println("Invalid Value");
+            }
+
+        else {
+            long calc = Math.round(kilometersPerHour / 1.609);
+            System.out.println(kilometersPerHour + " km/h = " + calc +" mi/h");
+
+        }
+
+
+
+    }
+
+}
