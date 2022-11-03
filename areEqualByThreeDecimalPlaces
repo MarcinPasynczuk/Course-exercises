@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Exercise {
+    public static void main(String[] args) {
+
+    }
+
+
+    public static boolean areEqualByThreeDecimalPlaces(double num1, double num2){
+        if (num1-num2<0.0009 && num1-num2>-0.0009) {
+            System.out.println(true);
+            return true;
+
+        } else {
+            System.out.println(false);
+            return false;
+        }
+
+
+    }
+
+}
