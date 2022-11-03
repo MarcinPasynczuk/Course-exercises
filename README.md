@@ -1,2 +1,3 @@
 # Course-exercises
-Most of them are boolean return exercises with some math.
+Java Programming Masterclass exercises, my solutions without the instructions.
+
