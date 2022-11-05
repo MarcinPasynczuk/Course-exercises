@@ -1,0 +1,71 @@
+public class Exercise {
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
+    public static void main(String[] args) {
+
+        getDurationString(559,-59);
+        getDurationString(61);
+
+    }
+
+
+    public static String getDurationString(int minutes, int seconds) {
+        if (minutes<0 || seconds <0 || seconds > 59){
+            System.out.println(INVALID_VALUE_MESSAGE);
+
+            return INVALID_VALUE_MESSAGE;
+
+        }
+
+        int calc = minutes/60;
+        int remandingMinutes = minutes%60;
+
+
+
+            String hourString = calc +"h ";
+            if (calc<10) {
+                hourString = "0"+calc +"h ";
+            }
+            String remandingMinutesString = remandingMinutes +"m ";
+            if (remandingMinutes<10) {
+                remandingMinutesString = "0"+remandingMinutes+"m ";
+            }
+            String secondsString = seconds +"s";
+            if (seconds<10) {
+                secondsString  = "0" +seconds +"s";
+            }
+            System.out.println(hourString+remandingMinutesString+secondsString);
+        return hourString+remandingMinutesString+secondsString;
+
+
+
+        }
+
+
+
+
+
+
+    public static int getDurationString(int seconds) {
+        if (seconds >=0){
+            int minutes = seconds/60;
+            seconds = seconds%60;
+
+
+            getDurationString(minutes, seconds);
+            return minutes + seconds;
+
+
+        }
+
+        System.out.println("Invalid data");
+        return -1;
+    }
+}
+
+
+
+
+
+
+
+
