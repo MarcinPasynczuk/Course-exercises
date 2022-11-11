@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Exercise {
+
+    public static void main(String[] args) {
+        System.out.print("Put char:");
+        Scanner sc = new Scanner(System.in);
+        char input;
+        input = sc.next().charAt(0);
+
+        char test = 'E';
+
+        switch(input) {
+            case 'A':
+                System.out.println("It's A");
+                break;
+            case 'B':
+                System.out.println("It's B");
+                break;
+            case 'C': case 'D': case 'E':
+                System.out.println("It's "+test);
+                break;
+             default:
+                System.out.println("Not found");
+        }
