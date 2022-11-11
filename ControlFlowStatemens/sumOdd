@@ -1,0 +1,43 @@
+public class Exercise {
+
+    public static void main(String[] args) {
+
+        sumOdd(1, 11);
+
+
+
+    }
+
+    public static boolean isOdd(int number){
+        if (number > 0 && number%2!=0){
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public static int sumOdd(int start, int end) {
+int num = 0;
+if (start>0 && start <= end){
+    for(int i=start; i<=end; i++){
+        if(isOdd(i)){
+            num = num+i;
+
+        }
+
+    }
+    System.out.println(num);
+    return num;
+
+
+
+}
+else {
+        System.out.println(-1);
+return -1;
+}
+
+        }
+
+}
