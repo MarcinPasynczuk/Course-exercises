@@ -1,0 +1,33 @@
+
+public class Exercise {
+
+    public static void main(String[] args) {
+
+        hasSharedDigit(12, 23);
+        hasSharedDigit(9, 99);
+        hasSharedDigit(14, 55);
+
+    }
+
+    public static boolean hasSharedDigit(int firstNumber, int secondNumber) {
+        if ((firstNumber >=10 && firstNumber <=99)&&(secondNumber >=10 && secondNumber <=99)){
+            int firstNumberFirst = firstNumber%10;
+            firstNumber = firstNumber/10;
+            int secondNumberFirst = secondNumber%10;
+            secondNumber = secondNumber/10;
+            if (firstNumberFirst == secondNumberFirst || firstNumberFirst == secondNumber || firstNumber == secondNumber || firstNumber == secondNumberFirst){
+                System.out.println("true");
+                return true;
+            }
+            System.out.println("false1");
+            return false;
+//            System.out.println("kod");
+//            System.out.println(firstNumber);
+//            System.out.println(firstNumberFirst);
+        }
+        else {
+        System.out.println("false");}
+        return false;
+
+    }
+}
