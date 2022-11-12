@@ -1,0 +1,41 @@
+public class Exercise {
+
+    public static void main(String[] args) {
+        sumDigits(123);
+        sumDigits(15);
+        sumDigits(9875);
+        sumDigits(101);
+        sumDigits(10001);
+        sumDigits(-10001);
+
+            }
+
+            public static int sumDigits(int number){
+
+        if(number>=10){
+               int total = number%10;
+                        do {
+                number = number/10;
+                total = total + number%10;
+//                System.out.println(number);
+//                            System.out.println(total);
+
+
+
+            }
+            while (number>=10);
+            System.out.println(total);
+            return total;
+
+            }
+
+
+
+
+                System.out.println(-1);
+        return -1;
+
+            }
+
+
+    }
