@@ -1,0 +1,38 @@
+public class Exercise {
+    public static void main(String[] args)
+    {
+//        getGreatestCommonDivisor(25, 15);
+//
+//        getGreatestCommonDivisor(12, 30);
+//
+//        getGreatestCommonDivisor(9, 18);
+
+//        getGreatestCommonDivisor(1000000, 1000000000);
+
+
+        }
+
+        public static int getGreatestCommonDivisor(int first, int second){
+        if(first>=10 && second >=10){
+            int i = 0;
+            int number = 0;
+           do {
+                i++;
+                if (first%i==0 && second%i==0){
+                    number = i;
+
+//                System.out.println(i);
+                }
+
+            } while (i!=first);
+            System.out.println(number);
+            return number;
+                }
+
+
+
+
+        else {
+//            System.out.println(-1);
+            return -1;
+        }}}
