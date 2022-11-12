@@ -1,0 +1,74 @@
+public class Exercise {
+
+    public static void main(String[] args) {
+
+        getEvenDigitSum(123456789);
+        getEvenDigitSum(252);
+        getEvenDigitSum(-22);
+
+
+
+            }
+
+            public static int getEvenDigitSum(int number){
+        int number1=0;
+        int sum = 0;
+
+
+       if(number>=0){
+           do {
+
+               number1 = number%10;
+               number = number/10;
+
+               if(number1%2==0){
+                   sum = sum + number1;
+//                   System.out.println(sum);
+               }
+
+
+//               System.out.println(sum);
+//               return sum;
+
+
+
+//               System.out.println("num1" + number1);
+//                System.out.println("number" + number);
+
+           }
+
+           while (number>10);
+
+           if(number%2==0){
+               sum = sum + number;
+//                   System.out.println(sum);
+           }
+
+
+           System.out.println(sum);
+           return sum;
+
+
+
+
+
+
+        }
+       else {
+
+           System.out.println("-1");
+           return -1;
+
+       }
+
+
+               }
+
+
+
+            }
+
+
+
+
+
