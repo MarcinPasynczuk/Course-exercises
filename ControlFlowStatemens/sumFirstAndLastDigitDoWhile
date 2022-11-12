@@ -1,0 +1,45 @@
+
+public class Exercise {
+
+    public static void main(String[] args) {
+
+        sumFirstAndLastDigit(252);
+        sumFirstAndLastDigit(257);
+        sumFirstAndLastDigit(0);
+        sumFirstAndLastDigit(5);
+        sumFirstAndLastDigit(-10);
+
+
+
+            }
+
+            public static int sumFirstAndLastDigit(int number){
+        int number1 = number%10;
+       if(number>=10){
+           do {
+               number = number/10;
+//                System.out.println(number);
+           }
+           while (number>=10);
+
+           System.out.println(number+number1);
+           return (number+number1);
+
+        }
+       else if(number>=0 && number <=10) {
+           System.out.println(2*number1);
+           return 2*number1;
+       }
+
+       else {
+
+           System.out.println("-1");
+           return -1;
+       }
+
+
+               }
+
+
+
+            }
