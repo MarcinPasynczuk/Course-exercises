@@ -1,7 +1,10 @@
 public class Exercise {
     public static void main(String[] args)
     {
-//        numberToWords(123);
+//        numberToWords(0);
+        numberToWords(10);
+        numberToWords(7);
+
 //            numberToWords(1010);
 //            numberToWords(1000);
 //            numberToWords(-12);
@@ -11,10 +14,10 @@ public class Exercise {
 //        getDigitCount(-12);
 //        getDigitCount(5200);
 
-        reverse(-121);
-        reverse(1212);
-        reverse(1234);
-        reverse(100);
+//        reverse(-121);
+//        reverse(1212);
+//        reverse(1234);
+//        reverse(100);
 
     }
         public static void numberToWords(int number){
@@ -30,47 +33,38 @@ public class Exercise {
                 number10 = number10/10;
                 String abc;
                 switch (lastNumber) {
-                    case 0 -> {
-                        abc = "Zero";
+                    case 0:  abc = "Zero";
                         System.out.println(abc);
-                    }
-                    case 1 -> {
-                        abc = "One";
+                        break;
+                    case 1:  abc = "One";
                         System.out.println(abc);
-                    }
-                    case 2 -> {
-                        abc = "Two";
+                        break;
+                    case 2:  abc = "Two";
                         System.out.println(abc);
-                    }
-                    case 3 -> {
-                        abc = "Three";
+                        break;
+                    case 3:  abc = "Three";
                         System.out.println(abc);
-                    }
-                    case 4 -> {
-                        abc = "Four";
+                        break;
+                    case 4:  abc = "Four";
                         System.out.println(abc);
-                    }
-                    case 5 -> {
-                        abc = "Five";
+                        break;
+                    case 5:  abc = "Five";
                         System.out.println(abc);
-                    }
-                    case 6 -> {
-                        abc = "Six";
+                        break;
+                    case 6:  abc = "Six";
                         System.out.println(abc);
-                    }
-                    case 7 -> {
-                        abc = "Seven";
+                        break;
+                    case 7:  abc = "Seven";
                         System.out.println(abc);
-                    }
-                    case 8 -> {
-                        abc = "Eight";
+                        break;
+                    case 8:   abc = "Eight";
                         System.out.println(abc);
-                    }
-                    case 9 -> {
-                        abc = "Nine";
+                        break;
+                    case 9: abc = "Nine";
                         System.out.println(abc);
+                        break;
                     }
-                }
+
 
             } while (number10>0);
 
@@ -98,7 +92,7 @@ public static int getDigitCount(int number){
                 count++;
 
             } while (number>0);
-            System.out.println(count);
+//            System.out.println(count);
             return count;
 
 
@@ -139,11 +133,11 @@ public static int reverse(int number){
 
     if (number<0){
         reverseNumber *=-1;
-        System.out.println(reverseNumber);
+//        System.out.println(reverseNumber);
         return reverseNumber;
     }
     else {
-        System.out.println(reverseNumber);
+//        System.out.println(reverseNumber);
         return reverseNumber;
     }
 }
