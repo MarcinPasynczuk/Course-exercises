@@ -1,0 +1,150 @@
+public class Exercise {
+    public static void main(String[] args)
+    {
+//        numberToWords(123);
+//            numberToWords(1010);
+//            numberToWords(1000);
+//            numberToWords(-12);
+
+//        getDigitCount(0);
+//        getDigitCount(123);
+//        getDigitCount(-12);
+//        getDigitCount(5200);
+
+        reverse(-121);
+        reverse(1212);
+        reverse(1234);
+        reverse(100);
+
+    }
+        public static void numberToWords(int number){
+        if(number>=0){
+            int number10 = reverse(number);
+
+
+            int lastNumber;
+            int counter = 0;
+            do {
+                counter++;
+                lastNumber = number10%10;
+                number10 = number10/10;
+                String abc;
+                switch (lastNumber) {
+                    case 0 -> {
+                        abc = "Zero";
+                        System.out.println(abc);
+                    }
+                    case 1 -> {
+                        abc = "One";
+                        System.out.println(abc);
+                    }
+                    case 2 -> {
+                        abc = "Two";
+                        System.out.println(abc);
+                    }
+                    case 3 -> {
+                        abc = "Three";
+                        System.out.println(abc);
+                    }
+                    case 4 -> {
+                        abc = "Four";
+                        System.out.println(abc);
+                    }
+                    case 5 -> {
+                        abc = "Five";
+                        System.out.println(abc);
+                    }
+                    case 6 -> {
+                        abc = "Six";
+                        System.out.println(abc);
+                    }
+                    case 7 -> {
+                        abc = "Seven";
+                        System.out.println(abc);
+                    }
+                    case 8 -> {
+                        abc = "Eight";
+                        System.out.println(abc);
+                    }
+                    case 9 -> {
+                        abc = "Nine";
+                        System.out.println(abc);
+                    }
+                }
+
+            } while (number10>0);
+
+            if (counter < getDigitCount(number)){
+            do {
+                counter++;
+                System.out.println("Zero");
+            }
+            while (counter < getDigitCount(number));}
+
+
+        }
+        else{
+            System.out.println("Invalid Value");
+        }
+
+}
+public static int getDigitCount(int number){
+        if (number>=0){
+            int count = 0;
+            int lastNumber;
+            do {
+                lastNumber = number%10;
+                number = number/10;
+                count++;
+
+            } while (number>0);
+            System.out.println(count);
+            return count;
+
+
+        }
+        else {
+            System.out.println("-1");
+            return -1;
+        }
+
+}
+public static int reverse(int number){
+        int lastNumber2;
+        int number2 = Math.abs(number);
+        int count1=0;
+    do {
+        lastNumber2 = number2%10;
+        number2 = number2/10;
+        count1++;
+
+    } while (number2>0);
+
+
+
+    int count = count1;
+    int lastNumber;
+    int reverseNumber = 0;
+    int sqr = -1;
+    int number3=number;
+    do {
+        lastNumber = Math.abs(number3)%10;
+        number3 = Math.abs(number3)/10;
+        count--;
+        sqr = (int) Math.pow(10, count);
+        reverseNumber = reverseNumber + lastNumber*sqr;
+
+    } while (number3>0);
+
+
+    if (number<0){
+        reverseNumber *=-1;
+        System.out.println(reverseNumber);
+        return reverseNumber;
+    }
+    else {
+        System.out.println(reverseNumber);
+        return reverseNumber;
+    }
+}
+}
