@@ -1,0 +1,39 @@
+public class Exercise {
+    public static void main(String[] args)
+    {
+        isPerfectNumber(6);
+        isPerfectNumber(28);
+        isPerfectNumber(5);
+        isPerfectNumber(-1);
+
+    }
+
+
+
+        public static boolean isPerfectNumber(int number){
+        if (number>=1){
+            int sumNumber = 0;
+            for(int i=1;i<number;i++){
+                if(number%i==0){
+                    sumNumber = sumNumber + i;
+//                    System.out.println(sumNumber);
+                }
+
+            }
+            if (sumNumber == number){
+
+                System.out.println("true");
+                return true;
+            }
+            else{
+                System.out.println("false1");
+                return false;
+            }
+        }
+        else{
+            System.out.println("false");
+            return false;
+        }
+
+}
+}
