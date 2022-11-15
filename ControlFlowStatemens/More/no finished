@@ -1,0 +1,54 @@
+public class Exercise {
+    public static void main(String[] args) {
+        getLargestPrime (21);
+//        getLargestPrime (217);
+//        getLargestPrime (0);
+//        getLargestPrime (45);
+//        getLargestPrime (-1);
+    }
+    public static int getLargestPrime(int number){
+        int i = 1;
+        int number10 = number;
+        do {
+           number10 = number/i++;
+           if (number%i++==0){
+            System.out.println(number10);}
+
+
+
+            int j = number;
+            int number3 = 0;
+            int number2 = 0;
+                       do {
+
+
+                           number2 = number%j--;
+                if (number2==0) {
+                    number3++;
+//                    System.out.println(number3);
+                }
+
+
+
+
+                       }
+
+
+            while (j>=1);
+            if (number3==2) {
+                System.out.println(number + "Ta liczba jest liczbą pierwszą.");
+                return number;
+
+
+
+            }
+
+
+        } while(number10>0);
+        System.out.println("-1");
+return -1;
+
+    }
+}
+
+
