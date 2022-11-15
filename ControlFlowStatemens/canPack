@@ -1,13 +1,13 @@
 public class Exercise {
     public static void main(String[] args) {
-        canPack (6, 75, 100);
+        canPack (2, 1, 5);
 //                canPack (1, 0, 5);
 //                canPack (0, 5, 4);
 //        canPack (2, 2, 11);
 //                canPack (-3, 2, 12);
 
     }
-    public static void canPack(int bigCount,int smallCount,int goal){
+    public static boolean canPack(int bigCount,int smallCount,int goal){
 int bigCountBox;
 if (bigCount > 0 && goal*5 >= bigCount){
                 do {
@@ -18,17 +18,29 @@ bigCountBox = 5*((bigCount-- - 1));
 
         } while (bigCount>0 && goal>= 5);}
 
-        if (smallCount > 0 && goal<=smallCount){
+        if (smallCount > 0 && goal<=smallCount && goal > 0){
             do {
                 goal = goal - 1;
                 smallCount--;
                 System.out.println("goal " +goal);
                 System.out.println("small " + smallCount);
 
-            } while (bigCount>0 && goal>0);}
+            } while (smallCount>0 && goal>0);}
+
+        if (goal==0){
+            System.out.println("true");
+            return true;
+        }
+        else {
+            System.out.println("false");
+            return false;
+        }
 
 
 
 
     }
 }
+
+
+
