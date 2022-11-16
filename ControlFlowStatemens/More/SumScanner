@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Exercise {
+    public static void main(String[] args) {
+int i = 1;
+int sumNum = 0;
+Scanner scanner = new Scanner(System.in);
+        while (i <= 10) {
+
+            System.out.println("Put " + i++ + " number:");
+            boolean isAnInt = scanner.hasNextInt();
+
+
+            if (!isAnInt){
+                System.out.println("Invalid Number");
+                return;
+
+            }
+            else {
+                int number = scanner.nextInt();
+               sumNum = sumNum + number;
+            }
+
+
+scanner.nextLine();
+
+
+        }
+
+
+
+        System.out.println(sumNum);
+        scanner.close();
+
+
+
+    }
+}
