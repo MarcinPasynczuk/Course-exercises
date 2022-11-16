@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Exercise {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int i = 1;
+        int maxNumber = Integer.MAX_VALUE;
+        int minNumber = Integer.MIN_VALUE;
+        while (true) {
+
+            System.out.println("Put number:");
+            boolean isAnInt = scanner.hasNextInt();
+            if (!isAnInt){
+                System.out.println("Invalid Number");
+                System.out.println("Max: " + maxNumber);
+                System.out.println("Min: " + minNumber);
+                scanner.close();
+                return;
+
+            }
+            else {
+                int number = scanner.nextInt();
+                if (number > maxNumber){
+                    maxNumber = number;
+                }
+                if (number<minNumber){
+                    minNumber = number;
+                }
+
+            }
+            scanner.nextLine();
+
+        }
+
+
+    }
+
+}
