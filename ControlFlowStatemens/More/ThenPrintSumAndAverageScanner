@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+public class Exercise {
+    public static void main(String[] args) {
+        inputThenPrintSumAndAverage();
+                }
+
+                public static void inputThenPrintSumAndAverage(){
+                    Scanner scanner = new Scanner(System.in);
+                    int i = 0;
+                    int sumNum = 0;
+                    while (true) {
+
+                        System.out.println("Put number:");
+                        System.out.println("sumnum" + sumNum);
+                        System.out.println("i" + i);
+                        boolean isAnInt = scanner.hasNextInt();
+                        if (!isAnInt){
+
+                            System.out.println("SUM = " + sumNum + " AVG = " + Math.round((double)sumNum/i));
+                            scanner.close();
+                            return;
+
+                        }
+                        else {
+                            int number = scanner.nextInt();
+                            sumNum = sumNum + number;
+                            i++;
+                        }
+                        scanner.nextLine();
+
+                    }
+
+                }
+
+
+
+    }
