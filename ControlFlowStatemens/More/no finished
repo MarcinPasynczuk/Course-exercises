@@ -1,54 +1,58 @@
 public class Exercise {
     public static void main(String[] args) {
         getLargestPrime (21);
-//        getLargestPrime (217);
-//        getLargestPrime (0);
-//        getLargestPrime (45);
-//        getLargestPrime (-1);
+        getLargestPrime (217);
+        getLargestPrime (0);
+        getLargestPrime (45);
+        getLargestPrime (-1);
     }
     public static int getLargestPrime(int number){
         int i = 1;
-        int number10 = number;
-        do {
-           number10 = number/i++;
-           if (number%i++==0){
-            System.out.println(number10);}
+        int lastNum = i;
+        if (number>1) {
+            do {
+                i++;
+                if (number % i == 0) {
+//                System.out.println(i);
 
 
-
-            int j = number;
-            int number3 = 0;
-            int number2 = 0;
-                       do {
-
-
-                           number2 = number%j--;
-                if (number2==0) {
-                    number3++;
-//                    System.out.println(number3);
+                    int j = 0;
+                    int count = 0;
+                    do {
+                        j++;
+                        if (i % j == 0) {
+                            count++;
+//                    System.out.println("dzielnik" + count);
+//                    System.out.println(j);
+                        }
+                    } while (j <= i);
+                    if (count == 2) {
+                        lastNum = i;
+                    }
                 }
 
 
+            } while (i < number);
+            System.out.println(lastNum);
+            return lastNum;
+        }
+        else {
+            System.out.println(-1);
+            return -1;
+        }
+
+//        int j = 0;
+//        int count = 0;
+//        do {
+//            j++;
+//            if(i%j==0) {
+//                count++;
+//                System.out.println("dzielnik" + count); // to zmienić tu nie działa
+//                System.out.println(j);
+//            }
+//        } while (j<=i);
 
 
-                       }
-
-
-            while (j>=1);
-            if (number3==2) {
-                System.out.println(number + "Ta liczba jest liczbą pierwszą.");
-                return number;
-
-
-
-            }
-
-
-        } while(number10>0);
-        System.out.println("-1");
-return -1;
 
     }
 }
-
-
