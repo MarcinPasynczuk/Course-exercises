@@ -3,8 +3,8 @@ public class Exercise {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int i = 1;
-        int maxNumber = Integer.MAX_VALUE;
-        int minNumber = Integer.MIN_VALUE;
+        int maxNumber = Integer.MIN_VALUE;
+        int minNumber = Integer.MAX_VALUE;
         while (true) {
 
             System.out.println("Put number:");
