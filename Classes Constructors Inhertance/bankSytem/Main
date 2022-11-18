@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        bankAccount marcinAccount = new bankAccount(12345, 0.00, "Marcin", "email@gmail.com", "098272");
+
+        marcinAccount.getBalance();
+        marcinAccount.deposit(55);
+        marcinAccount.getBalance();
+
+
+    }
+}
