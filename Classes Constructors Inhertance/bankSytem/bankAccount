@@ -1,0 +1,96 @@
+public class bankAccount{
+        private int accountNumber;
+        private double balance;
+        private String customerName;
+        private String email;
+        private String phoneNumber;
+
+        public bankAccount(){
+                System.out.println("działa");
+        }
+
+
+
+        public bankAccount(int accountNumber, double balance, String customerName, String email, String phoneNumber){
+                System.out.println("done");
+                this.accountNumber = accountNumber;
+                this.balance = balance;
+                this.customerName = customerName;
+                this.email = email;
+                this.phoneNumber = phoneNumber;
+
+        }
+
+        // Getter & Setter accountNumber
+        public int getAccountNumber() {
+                return accountNumber;
+        }
+
+        public void setAccountNumber(int newAccountNumber) {
+                this.accountNumber = newAccountNumber;
+        }
+        // Getter & Setter accountNumber
+
+        // Getter & Setter balance
+        public double getBalance() {
+                System.out.println(balance);
+                return balance;
+        }
+
+        public void setBalance(int newBalance) {
+                this.balance = newBalance;
+                        }
+        // Getter & Setter balance
+
+        // Getter & Setter customerName
+        public String getCustomerName(){
+                return customerName;
+        }
+
+        public void setCustomerName(String newCustomerName){
+                this.customerName = newCustomerName;
+        }
+        // Getter & Setter customerName
+
+        // Getter & Setter email
+        public String getEmail(){
+                return email;
+        }
+
+        public void setEmail(String newEmail){
+                this.email = newEmail;
+        }
+        // Getter & Setter email
+
+        // Getter & Setter phoneNumber
+        public String getPhoneNumber() {
+                return phoneNumber;
+        }
+
+        public void setPhoneNumber(String newPhoneNumber) {
+                this.phoneNumber = newPhoneNumber;
+        }
+        // Getter & Setter phoneNumber
+
+        public void deposit(double howMuchDeposit){
+                this.balance += howMuchDeposit;
+                System.out.println(balance);
+        }
+
+        public void withdraw(double howMuchWithdraw){
+                if (balance >= howMuchWithdraw){
+                this.balance -= howMuchWithdraw;
+                System.out.println(balance);}
+                else {
+                        System.out.println("Balance is too low!");
+                }
+
+        }
+
+
+
+
+
+
+
+        }
