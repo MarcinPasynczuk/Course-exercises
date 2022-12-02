@@ -3,10 +3,20 @@ import java.util.Objects;
 
 public class Product {
     private String name;
+    private String phoneNumber;
 
 
-    public Product(String name) {
+    public Product(String name, String phoneNumber) {
         this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
@@ -17,14 +27,14 @@ public class Product {
         this.name = name;
     }
 
-    public static void addProduct(List<Product> list, String name){
-        list.add(new Product(name));
+    public static void addProduct(List<Product> list, String name, String phoneNumber){
+        list.add(new Product(name, phoneNumber));
     }
 
 
     @Override
     public String toString() {
-        return name;
+        return name + " -> " + phoneNumber;
     }
 
     @Override
