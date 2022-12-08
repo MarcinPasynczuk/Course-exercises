@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class X {
+    private int x = 1;
+
+
+    public void X() {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+
+        do {
+//            System.out.print("x " + x + " thisx: " + this.x);
+            System.out.println(x*this.x);
+            this.x += 1;
+        } while (this.x < 13);
+    }
+}
