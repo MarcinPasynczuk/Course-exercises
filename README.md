@@ -1,3 +1,3 @@
 # Course-exercises
-Java Programming Masterclass exercises, my solutions without the instructions.
+Java Programming Masterclass A LOT of exercises, my solutions without the instructions. 
 
